@@ -3,6 +3,10 @@ name: Check Zed Releases and Build for Windows
 on:
   workflow_dispatch:
     inputs:
+      tag:
+        description: 'Tag to fetch release for'
+        required: true
+        default: 'v0.189.0-pre'
       force_build:
         description: 'Force build even if not needed'
         required: false
